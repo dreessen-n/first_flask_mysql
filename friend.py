@@ -21,4 +21,11 @@ class Friend:
         for friend in results:
             friends.append( cls(friend) )
         return friends
-            
+
+    @classmethod
+    def save(cls, data):
+        """Class method to save our friend to the db"""
+        query = "INSERT INTO friends (first_name, last_name, occupation) VALUES (%(fname)s, %(lname)s, %(occ)s);"
+        # data is a dict that will be pased into the save method from server.py
+        return connectToMySQL('first_flask').query_db(query, data)
+

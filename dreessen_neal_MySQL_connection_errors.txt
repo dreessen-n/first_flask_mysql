@@ -1,0 +1,16 @@
+bad password: RuntimeError: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+
+misspelled host ('localhos' : pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'localhos' ([Errno 61] Connection refused)")
+
+no import pymeysql.cursors: NameError: name 'pymysql' is not defined
+
+removed data=none to data: TypeError: query_db() missing 1 required positional argument: 'data'
+
+ with self.connection.cursor() as cursor changed to  with self.connection.cursor(): TypeError: 'bool' object is not iterable
+
+comment out > cursor.execute(query, data): TypeError: 'bool' object is not iterable
+
+comment out > return cursor.lastrowid > weird nothing happened 
+
+comment out > self.connection.close() > site can't be reached and terminal kicks out error IndentationError: expected an indented block.
+
